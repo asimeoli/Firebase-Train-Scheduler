@@ -1,6 +1,6 @@
-/*body {
+body {
     background-color: #000000;
-}*/
+}
 
 #greenTrain {
     margin-top: 40px;
@@ -23,4 +23,18 @@
 
 #bottom {
     clear: both;
+}
+
+.panel-primary {
+    border-color: #4f9c28;
+}
+
+.panel-primary>.panel-heading {
+    background-color: #4f9c28;
+    border-color: #4f9c28;
+}
+
+.btn-primary {
+    background-color: #4f9c28;
+    border-color: #4f9c28;
 }

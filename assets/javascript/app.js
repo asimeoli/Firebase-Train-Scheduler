@@ -54,6 +54,7 @@ database.ref("trains").on("child_added", function(childSnapshot, prevChildKey) {
     var trainFrequency = childSnapshot.val().frequency;
     var trainNextRun = moment(childSnapshot.val().first, "HH:mm");
     var currentTime = moment();
+    console.log(currentTime);
     var difference = moment.duration(trainNextRun.diff(moment())).asMinutes();
 
     //Train minutes away
@@ -61,6 +62,7 @@ database.ref("trains").on("child_added", function(childSnapshot, prevChildKey) {
         trainNextRun.add(trainFrequency, "m");
         difference = moment.duration(trainNextRun.diff(moment())).asMinutes();
     }
+
 
     // Add each train's data into the table
     $("#train-table > tbody").append("<tr><td>" + trainName + "</td><td>" + trainDestination + "</td><td>" +
